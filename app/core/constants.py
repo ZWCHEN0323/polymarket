@@ -29,8 +29,21 @@ class ComponentStatus(StrEnum):
 
 APP_NAME: str = "Polymarket Trading Bot"
 APP_VERSION: str = "0.1.0"
+APP_HOST: str = "0.0.0.0"  # noqa: S104
+APP_PORT: int = 8000
 DEFAULT_LOG_LEVEL: str = "INFO"
+HEALTH_CHECK_PATH: str = "/health"
 API_V1_PREFIX: str = "/api/v1"
 HTTP_DEFAULT_TIMEOUT_SECONDS: float = 30.0
 HTTP_MAX_RETRIES: int = 3
 MASKED_SECRET_VISIBLE_CHARS: int = 4
+
+GCP_DEFAULT_REGION: str = "asia-northeast1"
+GCP_SERVICE_NAME: str = "polymarket-bot"
+GCP_ARTIFACT_REPOSITORY: str = "polymarket-bot"
+CLOUD_RUN_CPU: str = "1"
+CLOUD_RUN_MEMORY: str = "1Gi"
+CLOUD_RUN_TIMEOUT_SECONDS: int = 300
+CLOUD_RUN_CONCURRENCY: int = 80
+CLOUD_RUN_MIN_INSTANCES: int = 0
+CLOUD_RUN_MAX_INSTANCES: int = 1
